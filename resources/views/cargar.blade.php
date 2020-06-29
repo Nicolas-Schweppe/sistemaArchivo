@@ -1,5 +1,5 @@
 @extends('menu')
 
 @section('pagina')
-    <h1>cargasss</h1>
+    <h1>cargas</h1>
 @endsection
