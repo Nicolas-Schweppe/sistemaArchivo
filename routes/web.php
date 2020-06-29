@@ -10,20 +10,12 @@ Route::get('fotos/{numero?}',function($numero = 'sin numero'){//si no hay parame
 })->where('numero','[0-9]+');//si no ingresa un numero = error
 */
 
-Route::get('inicio', function () {
-    return view('inicio');
-})-> name('inicio');
+Route::get('inicio','ControladorVistas@inicio')-> name('inicio');
 
-Route::get('cargarArchivos', function () {
-    return view('cargar');
-})-> name('cargarArchivos');
+Route::get('cargarArchivos','ControladorVistas@cargarArchivos')-> name('cargarArchivos');
 
-Route::get('verArchivo', function () {
-    return view('verArchivo');
-})-> name('verArchivo');
+Route::get('verArchivo','ControladorVistas@verArchivos')-> name('verArchivo');
 
-Route::get('usuario', function () {
-    return view('usuario');
-})-> name('usuario');
+Route::get('usuarios','ControladorVistas@usuarios')-> name('usuarios');
 
 Route::view('galeria','fotos',['numero'=> 500]);

@@ -7,7 +7,7 @@
     class="table table-sm table-striped table-hover table-bordered">
         <thead>
     			<tr style="text-align:center">
-         			<th scope="col">Nº Cuotas</th><th scope="col">Monto Cuota</th><th scope="col">estado</th><th scope="col">Anterior Vencimiento</th><th scope="col">Proximo Vencimineto</th><th scope="col">PAGAR</th><th scope="col">Imprimir</th>
+         			<th scope="col">Id Archivo</th><th scope="col">Nombre</th><th scope="col">Fecha de Archivo</th><th scope="col">Usuario de carga</th><th scope="col">Tipo</th><th scope="col">fecha de carga</th><th scope="col">Descargar</th><th scope="col">Imprimir</th>
     		</thead>
       </br>
         
@@ -17,46 +17,22 @@
                <td style="text-align:center">nombre2</td>
                <td style="text-align:center">nobre3</td>
                <td style="text-align:center">nombre4</td>
+               <td style="text-align:center">nombre4</td>
                <td><button  type ="button" id ="agergarPago"  onclick=""><img alt="" src="imagenes/moneda.png" width="45" height="35"></button></td>
                <td><button  type ="button" id ="imprimir"  onclick=""><img alt="" src="imagenes/impresora.jpeg" width="45" height="35"></button></td>
           </tr>
+          @foreach ($archivo as $item)
           <tr>
-            <td style="text-align:center">2</td>
-            <td style="text-align:center">nombre1</td>
-            <td style="text-align:center">nombre2</td>
-            <td style="text-align:center">nobre3</td>
-            <td style="text-align:center">nombre4</td>
-            <td><button  type ="button" id ="agergarPago"  onclick=""><img alt="" src="imagenes/moneda.png" width="45" height="35"></button></td>
+            <td style="text-align:center">{{$item->idArchivo}}</td>
+            <td style="text-align:center">{{$item->nombre}}</td>
+            <td style="text-align:center">{{$item->fechaArchivo}}</td>
+            <td style="text-align:center">{{$item->idUsuario}}</td>
+            <td style="text-align:center">{{$item->tipo}}</td>
+            <td style="text-align:center">{{$item->created_at}}</td>
+            <td style="text-align:center"><button  type ="button" id =""  onclick="" ><img  src="imagenes/pdf.png" width="30" height="30"></button></td>
             <td><button  type ="button" id ="imprimir"  onclick=""><img alt="" src="imagenes/impresora.jpeg" width="45" height="35"></button></td>
        </tr>
-       <tr>
-        <td style="text-align:center">3</td>
-        <td style="text-align:center">nombre1</td>
-        <td style="text-align:center">nombre2</td>
-        <td style="text-align:center">nobre3</td>
-        <td style="text-align:center">nombre4</td>
-        <td><button  type ="button" id ="agergarPago"  onclick=""><img alt="" src="imagenes/moneda.png" width="45" height="35"></button></td>
-        <td><button  type ="button" id ="imprimir"  onclick=""><img alt="" src="imagenes/impresora.jpeg" width="45" height="35"></button></td>
-   </tr>
-   <tr>
-    <td style="text-align:center">4</td>
-    <td style="text-align:center">nombre1</td>
-    <td style="text-align:center">nombre2</td>
-    <td style="text-align:center">nobre3</td>
-    <td style="text-align:center">nombre4</td>
-    <td><button  type ="button" id ="agergarPago"  onclick=""><img alt="" src="imagenes/moneda.png" width="45" height="35"></button></td>
-    <td><button  type ="button" id ="imprimir"  onclick=""><img alt="" src="imagenes/impresora.jpeg" width="45" height="35"></button></td>
-</tr>
-<tr>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">nombre1</td>
-    <td style="text-align:center">nombre2</td>
-    <td style="text-align:center">nobre3</td>
-    <td style="text-align:center">nombre4</td>
-    <td><button  type ="button" id ="agergarPago"  onclick=""><img alt="" src="imagenes/moneda.png" width="45" height="35"></button></td>
-    <td><button  type ="button" id ="imprimir"  onclick=""><img alt="" src="imagenes/impresora.jpeg" width="45" height="35"></button></td>
-</tr>
-
+          @endforeach()
     </table>
 </div>    
         

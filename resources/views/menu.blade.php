@@ -11,12 +11,12 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{{ route('inicio') }}">Inicio</a>
+      <a class="navbar-brand" href="{{route('inicio')}}">Inicio</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="{{ route('cargarArchivos') }}">Cargar Archivo</a></li>
+      <li><a href="{{route('cargarArchivos')}}">Cargar Archivo</a></li>
       <li><a href="{{ route('verArchivo') }}">Ver Archivos</a></li>
-      <li><a href="{{ route('usuario') }}">Crear usuarios</a></li>
+      <li><a href="{{ route('usuarios') }}">Usuarios</a></li>
     </ul>
   </ul>
   <ul class="nav navbar-nav navbar-right">
