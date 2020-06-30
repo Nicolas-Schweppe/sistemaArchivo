@@ -2,26 +2,20 @@
 @extends('menu')
 
 @section('pagina')
+
+<div class="subtitulos"><h2>Archivos <img  src="/iconos/icons/File-earmark-text.svg" alt="" width="20" height="25" title="Bootstrap"></h2></div>
+</br>
 <div class="container">
     <table id="example"  data-order='[[ 5, "asc" ]]' data-page-length='25'
-    class="table table-sm table-striped table-hover table-bordered">
-        <thead>
-    			<tr style="text-align:center">
-         			<th scope="col">Id Archivo</th><th scope="col">Nombre</th><th scope="col">Fecha de Archivo</th><th scope="col">Usuario de carga</th><th scope="col">Tipo</th><th scope="col">fecha de carga</th><th scope="col">Descargar</th><th scope="col">Imprimir</th>
-    		</thead>
-      </br>
-        
-          <tr>
-               <td style="text-align:center">1</td>
-               <td style="text-align:center">nombre1</td>
-               <td style="text-align:center">nombre2</td>
-               <td style="text-align:center">nobre3</td>
-               <td style="text-align:center">nombre4</td>
-               <td style="text-align:center">nombre4</td>
-               <td><button  type ="button" id ="agergarPago"  onclick=""><img alt="" src="imagenes/moneda.png" width="45" height="35"></button></td>
-               <td><button  type ="button" id ="imprimir"  onclick=""><img alt="" src="imagenes/impresora.jpeg" width="45" height="35"></button></td>
-          </tr>
+    class="table table-sm table-striped table-hover table-bordered" >
+        <thead  >
+      
+        	<th style="text-align:center" >Id Archivo</th><th style="text-align:center">Nombre</th><th style="text-align:center">Fecha de Archivo</th><th style="text-align:center">Usuario de carga</th><th style="text-align:center">Tipo</th><th style="text-align:center">fecha de carga</th><th style="text-align:center">Descargar</th><th style="text-align:center">Editar</th>
+         
+        </thead>
+      
           @foreach ($archivo as $item)
+         
           <tr>
             <td style="text-align:center">{{$item->idArchivo}}</td>
             <td style="text-align:center">{{$item->nombre}}</td>
@@ -29,21 +23,30 @@
             <td style="text-align:center">{{$item->idUsuario}}</td>
             <td style="text-align:center">{{$item->tipo}}</td>
             <td style="text-align:center">{{$item->created_at}}</td>
-            <td style="text-align:center"><button  type ="button" id =""  onclick="" ><img  src="imagenes/pdf.png" width="30" height="30"></button></td>
-            <td><button  type ="button" id ="imprimir"  onclick=""><img alt="" src="imagenes/impresora.jpeg" width="45" height="35"></button></td>
+            
+            <td style="text-align:center">
+                <button  onclick="probar()" class="btn btn-link"><img  src="/iconos/icons/Download.svg" alt="" width="32" height="32" title="Bootstrap"></button>
+            </td>
+            <td style="text-align:center">
+                <button  onclick="editar()" class="btn btn-link"><img  src="/iconos/icons/Pencil.svg" alt="" width="32" height="32" title="Bootstrap"></button>
+            </td>
        </tr>
           @endforeach()
     </table>
 </div>    
         
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script>/* 
-        $(document).ready(function() {
-        $('#example').DataTable();
-        } ); */
+        <script src="jquery/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            function probar(){
+                alert("aca probando boton descargar");
+            }
+            function editar(){
+                alert("aca probando boton editar");
+            }
+
         $(document).ready(function() {
             $('#example').DataTable({
                 "columnDefs": [{

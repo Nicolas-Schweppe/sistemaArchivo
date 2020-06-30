@@ -17,6 +17,7 @@ class ControladorVistas extends Controller
 
     public function verArchivos(){
         $archivo=App\Archivo::all();
+        
         return view('verArchivos',compact('archivo'));
     }
 
