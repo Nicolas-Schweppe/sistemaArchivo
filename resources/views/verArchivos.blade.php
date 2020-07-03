@@ -10,19 +10,20 @@
     class="table table-sm table-striped table-hover table-bordered" >
         <thead  >
       
-        	<th style="text-align:center" >Id Archivo</th><th style="text-align:center">Nombre</th><th style="text-align:center">Fecha de Archivo</th><th style="text-align:center">Usuario de carga</th><th style="text-align:center">Tipo</th><th style="text-align:center">fecha de carga</th><th style="text-align:center">Descargar</th><th style="text-align:center">Editar</th>
+        	<th style="text-align:center" >Id Archivo</th><th style="text-align:center">Nombre</th><th style="text-align:center">Fecha de Archivo</th><th style="text-align:center">Usuario</th><th style="text-align:center">Tipo</th><th style="text-align:center">fecha de carga</th><th style="text-align:center">Descargar</th><th style="text-align:center">Editar</th>
          
         </thead>
-      
+   
           @foreach ($archivo as $item)
-         
+          <?php  $fecha= new DateTime($item->fechaArchivo);$fechaArchivo = $fecha->format('d/m/Y');
+          $fechaC= new DateTime($item->created_at);$fechaCreation = $fechaC->format('d/m/Y');?>
           <tr>
             <td style="text-align:center">{{$item->idArchivo}}</td>
             <td style="text-align:center">{{$item->nombre}}</td>
-            <td style="text-align:center">{{$item->fechaArchivo}}</td>
+            <td style="text-align:center">{{$fechaArchivo }}</td>
             <td style="text-align:center">{{$item->idUsuario}}</td>
             <td style="text-align:center">{{$item->tipo}}</td>
-            <td style="text-align:center">{{$item->created_at}}</td>
+            <td style="text-align:center">{{$fechaCreation}}</td>
             
             <td style="text-align:center">
                 <button  onclick="probar()" class="btn btn-link"><img  src="/iconos/icons/Download.svg" alt="" width="32" height="32" title="Bootstrap"></button>
