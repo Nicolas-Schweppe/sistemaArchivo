@@ -23,7 +23,14 @@
     -webkit-animation-name: zoomIn;
     animation-name: zoomIn;
   }
-  .focus{
-
-    background-color: blue;
+  .focus a{
+    
+  transition: background-color .5s;
+   color: white;
   }
+  a:hover {
+    
+    color: rgb(199, 224, 238);
+  }
+  
+  
