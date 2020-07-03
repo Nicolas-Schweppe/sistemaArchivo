@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="/css/subtitulos.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/footer.css" media="all">
   <link rel="stylesheet" type="text/css" href="css/datatable.min.css"/>
 
 </head>
@@ -44,15 +45,20 @@
   </div>
 </div>
 </nav>
-
 <div class="container">
 
   @yield('pagina')
 
 </div>
-
+<div class="pie">
+  <footer>
+    <img src="imagenes/vialidad.png"  >
+  </footer> 
+</div>
 </body>
+
 <script type="text/javascript" src="js/datatable.min.js"></script>
+
 </html>
 
    
