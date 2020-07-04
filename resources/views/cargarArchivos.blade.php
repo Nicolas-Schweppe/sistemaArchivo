@@ -36,9 +36,9 @@
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck">
             <label class="form-check-label" for="gridCheck">
-              Check me out
+              Confirmar...
             </label>
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
         </div>
       </form>

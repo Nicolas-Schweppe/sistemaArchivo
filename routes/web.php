@@ -9,6 +9,7 @@ Route::get('fotos/{numero?}',function($numero = 'sin numero'){//si no hay parame
     return 'galeria de fotos : '.$numero;
 })->where('numero','[0-9]+');//si no ingresa un numero = error
 */
+Route::get('login','ControladorVistas@login')-> name('login');
 
 Route::get('inicio','ControladorVistas@inicio')-> name('inicio');
 

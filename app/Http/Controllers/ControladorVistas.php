@@ -8,6 +8,10 @@ use App;
 
 class ControladorVistas extends Controller
 {
+    public function login(){
+        return view('login');
+    }
+
     public function inicio(){
         return view('inicio');
     }
